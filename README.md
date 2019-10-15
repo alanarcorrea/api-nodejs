@@ -22,7 +22,7 @@ O projeto está sendo executado na porta 3000.
 
 ## API
 
-Para testar as requisições da API foi utilizada a ferramenta [https://www.getpostman.com/](Postman).
+Para testar as requisições da API foi utilizada a ferramenta [Postman](https://www.getpostman.com/).
 Collection criada para consultas á API disponível no link abaixo:
 
 [https://www.getpostman.com/collections/79ee7e368794e55dceeb](https://www.getpostman.com/collections/79ee7e368794e55dceeb).
