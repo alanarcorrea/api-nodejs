@@ -1,5 +1,5 @@
 const { User } = require('../models');
-const messages = require('../config/messages');
+const messages = require('../../config/messages');
 
 module.exports = {
     async index(req, res) {
