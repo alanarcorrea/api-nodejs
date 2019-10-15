@@ -1,4 +1,5 @@
 const { User } = require('../models');
+const messages = require('../config/messages');
 
 module.exports = {
     async index(req, res) {
@@ -12,7 +13,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.GENERIC_ERROR
             });
         }
     },
@@ -28,7 +29,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.USER_CREATED_FAILED
             });
         }
     },
@@ -44,25 +45,26 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.GENERIC_ERROR
             });
         }
     },
 
     async update(req, res) {
         try {
-            const users = await User.update( req.body, 
-                                    {where: {id: req.params.id }},
-                                    {new: true});
+            const users = await User.update(
+                req.body, 
+                { where: { id: req.params.id }},
+                { new: true });
             return res.json({
                 success: true,
-                data: users
+                data: req.body
             });
         } catch (error) {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.USER_UPDATED_FAILED
             });
         }
     },
@@ -72,13 +74,13 @@ module.exports = {
             const users = await User.destroy({where: {id: req.params.id}});
             return res.json({
                 success: true,
-                data: users
+                message: messages.USER_DELETED_SUCCESSFULLY
             });
         } catch (error) {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.USER_DELETED_FAILED
             });
         }
     }

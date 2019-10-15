@@ -7,4 +7,6 @@ app.use(express.urlencoded({ extended: false }));
 
 app.use('/api', require('./routes'));
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("Server running at 3000");
+});

@@ -10,5 +10,4 @@ router.post('/', CandidatesController.store);
 router.put('/:id', CandidatesController.update);
 router.delete('/:id', CandidatesController.destroy);
 
-
 module.exports = router;

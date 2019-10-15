@@ -10,5 +10,4 @@ router.post('/', OpportunitiesController.store);
 router.put('/:id', OpportunitiesController.update);
 router.delete('/:id', OpportunitiesController.destroy);
 
-
 module.exports = router;

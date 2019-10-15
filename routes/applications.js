@@ -10,5 +10,4 @@ router.post('/', ApplicationsController.store);
 router.put('/:id', ApplicationsController.update);
 router.delete('/:id', ApplicationsController.destroy);
 
-
 module.exports = router;

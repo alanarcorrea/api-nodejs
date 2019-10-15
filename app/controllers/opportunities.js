@@ -7,7 +7,7 @@ module.exports = {
                 include: [
                     {
                         model: Candidate,
-                        as: 'candidates',
+                        as: 'Candidates',
                         through: { attributes: [] },
                     },
                 ],
@@ -59,12 +59,13 @@ module.exports = {
 
     async update(req, res) {
         try {
-            const opportunities = await Opportunity.update( req.body, 
-                                    {where: {id: req.params.id }},
-                                    {new: true});
+            const opportunities = await Opportunity.update( 
+                req.body, 
+                { where: { id: req.params.id }},
+                { new: true });
             return res.json({
                 success: true,
-                data: opportunities
+                data: req.body
             });
         } catch (error) {
             return res.json({
@@ -79,8 +80,7 @@ module.exports = {
         try {
             const opportunities = await Opportunity.destroy({where: {id: req.params.id}});
             return res.json({
-                success: true,
-                data: opportunities
+                success: true
             });
         } catch (error) {
             return res.json({

@@ -51,12 +51,14 @@ module.exports = {
 
     async update(req, res) {
         try {
-            const applications = await Application.update( req.body, 
-                                    {where: {id: req.params.id }},
-                                    {new: true});
+            const applications = await Application.update(
+                req.body, 
+                { where: { id: req.params.id }},
+                { new: true }
+            );
             return res.json({
                 success: true,
-                data: applications
+                data: req.body
             });
         } catch (error) {
             return res.json({
@@ -71,8 +73,7 @@ module.exports = {
         try {
             const applications = await Application.destroy({where: {id: req.params.id}});
             return res.json({
-                success: true,
-                data: applications
+                success: true
             });
         } catch (error) {
             return res.json({

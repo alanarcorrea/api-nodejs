@@ -16,9 +16,6 @@ module.exports = {
         unique: true,
         lowercase:true,
         type: DataTypes.STRING,
-        //validate: {
-        //  isEmail: true,
-       // }
       },
       phone: {
         allowNull: false,
@@ -27,10 +24,6 @@ module.exports = {
       cpf: {
         allowNull: false,
         type: DataTypes.STRING,
-        //validate: {
-        //  isNumeric: true,
-        //  max: 11,
-       // }
       },
       createdAt: {
         allowNull: false,
