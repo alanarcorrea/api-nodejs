@@ -1,9 +1,14 @@
-const { Application } = require('../models');
+const { Application, Candidate, Opportunity } = require('../models');
 
 module.exports = {
     async index(req, res) {
         try {
-            const applications = await Application.findAll();
+            const applications = await Application.findAll({
+                include: [
+                    { model: Candidate },
+                    { model: Opportunity }
+                ]
+            });
             return res.json({
                 success: true,
                 data: applications
