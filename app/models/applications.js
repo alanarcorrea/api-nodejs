@@ -1,8 +1,40 @@
+const messages = require('../../config/messages');
+
 module.exports = (sequelize, DataTypes) => {
     const Application = sequelize.define('Application', {
-      candidate_id: DataTypes.INTEGER,
-      opportunity_id: DataTypes.INTEGER,
-      comments: DataTypes.STRING,
+      candidate_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validade: {
+          notEmpty: {
+            msg: messages.INVALID_FIELD_NOT_EMPTY
+          },
+          isNumeric: {
+            msg: messages.INVALID_FIELD_NUMERIC
+          }
+        }
+      },
+      opportunity_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        validade: {
+          notEmpty: {
+            msg: messages.INVALID_FIELD_NOT_EMPTY
+          },
+          isNumeric: {
+            msg: messages.INVALID_FIELD_NUMERIC
+          }
+        }
+      },
+      comments: {
+        type: DataTypes.STRING,
+        allowNull: false,
+        validade: {
+          notEmpty: {
+            msg: messages.INVALID_FIELD_NOT_EMPTY
+          }
+        }
+      }   
     });
   
     Application.associate = function(models){

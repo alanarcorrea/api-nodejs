@@ -30,4 +30,11 @@ messages.APPLICATION_UPDATED_FAILED = 'Erro ao atualizar candidatura';
 messages.APPLICATION_DELETED_SUCCESSFULLY = 'Candidatura removida com sucesso';
 messages.APPLICATION_DELETED_FAILED = 'Erro ao remover candidatura';
 
+messages.INVALID_FIELD_NOT_EMPTY = 'Este campo não pode ser vazio';
+messages.INVALID_FIELD_EMAIL = 'Este campo precisa ser um e-mail';
+messages.INVALID_FIELD_NUMERIC = 'Este campo precisa ser numérico';
+messages.INVALID_FIELD_LENGTH_PASSWORD = 'Este campo precisa ter entre 8 e 20 caracteres';
+messages.INVALID_FIELD_MAX = 'Este campo pode ter no máximo 11 caracteres';
+
+
 module.exports = messages;
