@@ -1,4 +1,5 @@
 const { Opportunity, Candidate } = require('../models');
+const messages = require('../../config/messages');
 
 module.exports = {
     async index(req, res) {
@@ -20,7 +21,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.GENERIC_ERROR
             });
         }
     },
@@ -36,7 +37,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.OPPORTUNITY_CREATED_FAILED
             });
         }
     },
@@ -52,7 +53,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: message.GENERIC_ERROR
             });
         }
     },
@@ -71,7 +72,7 @@ module.exports = {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.OPPORTUNITY_UPDATED_FAILED
             });
         }
     },
@@ -80,13 +81,14 @@ module.exports = {
         try {
             const opportunities = await Opportunity.destroy({where: {id: req.params.id}});
             return res.json({
-                success: true
+                success: true, 
+                message: messages.OPPORTUNITY_DELETED_SUCCESSFULLY
             });
         } catch (error) {
             return res.json({
                 success: false,
                 error,
-                message: 'Error...'
+                message: messages.OPPORTUNITY_DELETED_FAILED
             });
         }
     }
