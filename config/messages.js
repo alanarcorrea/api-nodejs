@@ -36,5 +36,4 @@ messages.INVALID_FIELD_NUMERIC = 'Este campo precisa ser numérico';
 messages.INVALID_FIELD_LENGTH_PASSWORD = 'Este campo precisa ter entre 8 e 20 caracteres';
 messages.INVALID_FIELD_MAX = 'Este campo pode ter no máximo 11 caracteres';
 
-
 module.exports = messages;

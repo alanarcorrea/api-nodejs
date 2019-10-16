@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       name: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
       description: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       requirements: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       salary: {
         type: DataTypes.FLOAT,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -41,7 +41,7 @@ module.exports = (sequelize, DataTypes) => {
       weeklyWorkload: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -50,7 +50,7 @@ module.exports = (sequelize, DataTypes) => {
       benefits: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -59,7 +59,7 @@ module.exports = (sequelize, DataTypes) => {
       workRegime: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -68,7 +68,7 @@ module.exports = (sequelize, DataTypes) => {
       activities: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -77,7 +77,7 @@ module.exports = (sequelize, DataTypes) => {
       workplace: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
@@ -86,7 +86,7 @@ module.exports = (sequelize, DataTypes) => {
       contact: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           },

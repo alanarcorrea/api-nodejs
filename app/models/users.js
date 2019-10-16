@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
     name: {
         type: DataTypes.STRING,
         allowNull: false, 
-        validade: {
+        validate: {
             notEmpty: {
                 msg: messages.INVALID_FIELD_NOT_EMPTY
             }
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     email: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
             notEmpty: {
                 msg: messages.INVALID_FIELD_NOT_EMPTY
             },
@@ -26,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
     password: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
             notEmpty: {
                 msg: messages.INVALID_FIELD_NOT_EMPTY
             },

@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
       candidate_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           },
@@ -17,7 +17,7 @@ module.exports = (sequelize, DataTypes) => {
       opportunity_id: {
         type: DataTypes.INTEGER,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           },
@@ -29,7 +29,7 @@ module.exports = (sequelize, DataTypes) => {
       comments: {
         type: DataTypes.STRING,
         allowNull: false,
-        validade: {
+        validate: {
           notEmpty: {
             msg: messages.INVALID_FIELD_NOT_EMPTY
           }
