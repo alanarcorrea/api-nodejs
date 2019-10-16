@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node index.js",
+    "start": "nodemon index.js",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
     "seed": "./node_modules/.bin/sequelize db:seed:all"
   },
@@ -16,6 +16,7 @@
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
     "mysql2": "^1.7.0",
+    "nodemon": "^1.19.4",
     "sequelize": "^5.19.6"
   },
   "devDependencies": {
