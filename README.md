@@ -17,6 +17,7 @@ No diretório do projeto, execute:
 - `npm run migrate`
 - `npm run seed`
 - `npm start`
+- `npm run test`
 
 O projeto está sendo executado na porta 3000.
 
@@ -27,4 +28,10 @@ Collection criada para consultas á API disponível no link abaixo:
 
 [https://www.getpostman.com/collections/79ee7e368794e55dceeb](https://www.getpostman.com/collections/79ee7e368794e55dceeb).
 
-## Diagrama ER
+## Testes Automatizados
+
+Para realizar os testes automatizados foi utilizada a biblioteca [Jest](https://jestjs.io/en/).
+
+## Versões
+
+NodeJS: 10.16.3

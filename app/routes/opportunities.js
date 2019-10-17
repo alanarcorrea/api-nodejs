@@ -1,8 +1,6 @@
-'use strict';
-
 const express = require('express');
 const router = express.Router();
-const OpportunitiesController = require('../app/controllers/opportunities');
+const OpportunitiesController = require('../controllers/opportunities');
 
 router.get('/', OpportunitiesController.index);
 router.get('/:id', OpportunitiesController.show);

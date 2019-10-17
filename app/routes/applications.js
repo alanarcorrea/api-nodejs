@@ -1,8 +1,6 @@
-'use strict';
-
 const express = require('express');
 const router = express.Router();
-const ApplicationsController = require('../app/controllers/applications');
+const ApplicationsController = require('../controllers/applications');
 
 router.get('/', ApplicationsController.index);
 router.get('/:id', ApplicationsController.show);

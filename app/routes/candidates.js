@@ -1,8 +1,6 @@
-'use strict';
-
 const express = require('express');
 const router = express.Router();
-const CandidatesController = require('../app/controllers/candidates');
+const CandidatesController = require('../controllers/candidates');
 
 router.get('/', CandidatesController.index);
 router.get('/:id', CandidatesController.show);
