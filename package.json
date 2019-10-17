@@ -5,7 +5,8 @@
   "scripts": {
     "start": "nodemon index.js",
     "migrate": "./node_modules/.bin/sequelize db:migrate",
-    "seed": "./node_modules/.bin/sequelize db:seed:all"
+    "seed": "./node_modules/.bin/sequelize db:seed:all",
+    "test": "jest"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,6 +21,7 @@
     "sequelize": "^5.19.6"
   },
   "devDependencies": {
+    "jest-cli": "^24.9.0",
     "sequelize-cli": "^5.5.1"
   }
 }
